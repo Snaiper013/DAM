@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tatuajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(51, 51, 51, 0.7);
+            font-family: "Brush Script MT", cursive;
+        }
+
+        header {
+            width: 98%;
+            background-color: rgba(0, 0, 0, 0.836);
+            color: #fff;
+            padding: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            overflow: hidden; 
+        }
+
+        .logo {
+            border-radius: 50px;
+            margin-left: 50px;
+            width: 80px;
+            height: auto;
+        }
+
+        nav ul {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        nav li {
+            margin-right: 3px;
+            margin: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        main {
+            padding: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.836);
+            color: #fff;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(51, 51, 51, 0.7);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(0, 0, 0, 0.836);;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .recuadro {
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+            padding: 50px; /* Espaciado interno */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+            text-align: center; /* Alinea el texto al centro */
+            height: 600px; /* Altura del recuadro */
+            width: 100%; /* Ancho del recuadro */
+            margin: 0 auto; /* Centra horizontalmente */
+            display: flex; /* Utiliza flexbox */
+            flex-direction: column; /* Apila los elementos verticalmente */
+            justify-content: flex-start; /* Alinea los elementos al inicio del recuadro */
+            font-family: "Brush Script MT", cursive; /* Establece la fuente */
+        }
+        
+        .recuadro h1 {
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .imagen {
+            flex-basis: 30%; /* Ancho relativo de cada imagen */
+            position: relative; /* Posición relativa para los elementos internos */
+        }  
+
+        .imagen img {
+            width: 100%; /* Ancho de la imagen al 100% del contenedor */
+            border-radius: 5px; /* Borde redondeado para la imagen */
+        }
+
+        .imagen p {
+            position: absolute; /* Posición absoluta para el texto */
+            top: 10px; /* Distancia desde arriba */
+            left: 0; /* Alinear a la izquierda */
+            right: 0; /* Alinear a la derecha */
+            margin: auto; /* Centrar horizontalmente */
+            width: 80%; /* Ancho del texto */
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 5px; /* Espaciado interno */
+            border-radius: 5px; /* Borde redondeado */
+            font-family: "Brush Script MT", cursive; /* Estilo de fuente */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/eclipse.jpeg" alt="Logo de la tienda" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#ubi">Donde encontrarnos</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#instalaciones">Nuestras instalaciones</a></li>
+                <li><ul>
+                    <div class="dropdown">
+                        <span>Tatuadores</span>
+                        <div class="dropdown-content">
+                            <a href="#">David</a>
+                            <a href="#">Antxonink</a>
+                            <a href="#">Kane</a>
+                            <a href="#">Carles</a>
+                            <a href="#">Dnaiel</a>
+                        </div>
+                    </div>
+                </ul></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <a href="https://www.instagram.com"><img src="/Imagenes/insta.png" alt="Instagram" class="instagram-icon"></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay loop muted>
+            <source src="/Imagenes/Video tatoo.mp4" type="video/mp4">
+        </video>
+        <div class="recuadro">
+            <h1>Artistas del Mes</h1>
+            <div class="recuadro">
+                <div class="imagen">
+                    <img src="ruta_de_la_imagen_1.jpg" alt="Imagen 1">
+                    <p>Texto encima de la Imagen 1</p>
+                </div>
+                <div class="imagen">
+                    <img src="ruta_de_la_imagen_2.jpg" alt="Imagen 2">
+                    <p>Texto encima de la Imagen 2</p>
+                </div>
+                <div class="imagen">
+                    <img src="ruta_de_la_imagen_3.jpg" alt="Imagen 3">
+                    <p>Texto encima de la Imagen 3</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eclipse Inkworks</p>
+    </footer>
+</body>
+</html>
