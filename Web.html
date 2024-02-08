@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tatuajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(51, 51, 51, 0.7);
+        }
+
+        header {
+            width: 98%;
+            background-color: rgba(0, 0, 0, 0.836);
+            color: #fff;
+            padding: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            overflow: hidden; 
+        }
+
+        .logo {
+            border-radius: 50px;
+            margin-left: 50px;
+            width: 80px;
+            height: auto;
+        }
+
+        nav ul {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 3px;
+            margin: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        main {
+            padding: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.836);
+            color: #fff;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: 500px;
+            height: auto;
+            z-index: -1;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(51, 51, 51, 0.7);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(0, 0, 0, 0.836);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/Imagenes/eclipse.jpeg" alt="Logo de la tienda" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#ubi">Donde encontrarnos</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>
+                <li><a href="#instalaciones">Nuestras instalaciones</a></li>
+                <li><ul>
+                    <div class="dropdown">
+                        <span>Tatuadores</span>
+                        <div class="dropdown-content">
+                            <a href="#">David</a>
+                            <a href="#">Antxonink</a>
+                            <a href="#">Kane</a>
+                            <a href="#">Carles</a>
+                            <a href="#">Dnaiel</a>
+                        </div>
+                    </div>
+                </ul></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <a href="https://www.instagram.com"><img src="/Imagenes/insta.png" alt="Instagram" class="instagram-icon"></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay loop muted>
+            <source src="/Imagenes/Video tatoo.mp4" type="video/mp4">
+        </video>
+        <!-- Contenido de la tienda -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Eclipse Inkworks</p>
+    </footer>
+</body>
+</html>
