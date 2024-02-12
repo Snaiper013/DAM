@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tatuajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(51, 51, 51, 0.7);
+            font-family: "Brush Script MT", cursive;
+        }
+
+        header {
+            width: 98%;
+            background-color: rgba(0, 0, 0, 0.836);
+            color: #fff;
+            padding: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            overflow: hidden;
+        }
+
+        .logo {
+            border-radius: 50px;
+            margin-left: 50px;
+            width: 80px;
+            height: auto;
+        }
+
+        nav ul {
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        nav li {
+            margin-right: 3px;
+            margin: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .instagram-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        main {
+            padding: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.959);
+            color: #fff;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        .recuadro {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 47em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: "Brush Script MT", cursive;
+        }
+
+        .recuadro h1 {
+            margin-top: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .imagenes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .imagen1 img,
+        .imagen2 img,
+        .imagen3 img {
+            margin-top: 3em;
+            width: 400px;
+            height: auto;
+        }
+
+        .TextImagen1,
+        .TextImagen2,
+        .TextImagen3 {
+            color: #fff;
+        }
+
+        form {
+            width: 80%; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+            font-family: "Brush Script MT", cursive;
+            margin-top: 40em; 
+        }
+
+        form h2 {
+            margin-top: 0; 
+            text-align: center; 
+        }
+
+        label {
+            color: #ffffff85;
+        }
+
+        .form-group1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group1 input,
+        .form-group1 select {
+            width: calc(40% - 20px);
+        }
+
+        .form-group2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group2 input,
+        .form-group2 select {
+            width: calc(40% - 20px);
+        }
+
+        .form-group3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group3 input,
+        .form-group3 select {
+            width: calc(40% - 20px);
+        }
+
+        .form-group4 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group4 input,
+        .form-group4 select {
+            width: calc(40% - 20px);
+        }
+        
+        .calcula {
+            display: flex;
+            justify-content: center;
+            font-family: "Brush Script MT", cursive; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="date"],
+        input[type="file"],
+        input[type="submit"] {
+            width: calc(35% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        input[type="submit"] {
+            background-color: #ad8a1f;
+            color: #fff;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .quest {
+            color: #ffffff;
+        }
+
+        .info-recuadro {
+            margin-top: 40em;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            width: fit-content; 
+            margin-left: auto; 
+            margin-right: auto;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .fotoubi {
+            max-width: 80%; 
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-left: auto; 
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        .ubicaçao {
+            color: #fff;
+        }
+
+        .maquina {
+            max-width: 10%; 
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-left: auto; 
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        .unicos-recuadro {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            margin-left: auto; 
+            margin-right: auto;
+            width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            margin-top: 40em;
+        }
+
+        .titulo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            text-align: left;
+            margin-left: 40px;
+            margin-top: 60px;
+        }
+
+        .texto {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .tatuando {
+           display: flex; 
+           margin-left: 1000px;
+        }
+
+        .tres-fotos-recuadro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            justify-items: left;
+        }
+
+        .seis-fotos-recuadro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            justify-items: left;
+        }
+
+        .foto {
+            margin: 5px;
+        }
+
+        .retrato1,
+        .retrato2,
+        .retrato3,
+        .retrato4,
+        .retrato5,
+        .retrato6 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .cantantes {
+            color: #fff;
+        }
+
+        .primer_recuadro,
+        .segundo_recuadro {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            width: 25%;
+            margin-top: 47em;
+            display: inline-block; /* Cambiado de "flex" a "inline-block" */
+            vertical-align: top; /* Alineación vertical al principio */
+            font-family: "Brush Script MT", cursive;
+        }
+
+        .primer_recuadro {
+            margin-right: 300px;
+            margin-left: 200px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/Imagenes/eclipse.jpeg" alt="Logo de la tienda" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#artistas-mes">Artistas del Mes</a></li>
+                <li><a href="#nuestros-artistas ">Nuestros Artistas</a></li>
+                <li><a href="#calculador">Calculador de Precio</a></li>
+                <li><a href="#ubi">Donde nos Encontrarnos</a></li>
+                <li><a href="#nosotros">Sobre nosotros</a></li>         
+                <li><a href="#contacto">Contacto</a></li>
+                <a href="https://www.instagram.com"><img src="/Imagenes/insta.png" alt="Instagram" class="instagram-icon"></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay loop muted>
+            <source src="/Imagenes/Video tatoo.mp4" type="video/mp4">
+        </video>
+        <div id="artistas-mes" class="recuadro">
+            <h1>Artistas del Mes</h1>
+            <div class="imagenes">
+                <div class="imagen1">
+                    <a class="TextImagen1" href="https://www.instagram.com">@Jakub_Grajewski</a>
+                    <img src="/Imagenes/unnamed (1).png" alt="Imagen 1">
+                    <p>BlackWork</p>
+                </div>
+                <div class="imagen2">
+                    <a class="TextImagen2" href="https://www.instagram.com">@Romeo_Perez</a>
+                    <img src="/Imagenes/dawdaddad.png" alt="Imagen 2">
+                    <p>NeoTribal</p>
+                </div>
+                <div class="imagen3">
+                    <a class="TextImagen3" href="https://www.instagram.com">@Carles_Català</a>
+                    <img src="/Imagenes/mascara.jpg" alt="Imagen 3">
+                    <p>Tradicional Japonés</p>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="">
+            <div id="nuestros-artistas" class="primer_recuadro">
+                <div class="tres-fotos-recuadro">
+                    <h1>Nuestros Artistas</h1>
+                    <div class="fila">
+                        <div class="retrato1"><img src="/Imagenes/tatuador1.jpg" alt="Imagen 1"></div>
+                        <a class="cantantes" href="#cigala">El Cigala</a>
+                        <div class="retrato2"><img src="/Imagenes/tatuador2,jpg.avif" alt="Imagen 2"></div>
+                        <a class="cantantes" href="#perales">Jose Luis Perales</a>
+                        <div class="retrato3"><img src="/Imagenes/tatuador3.jpg" alt="Imagen 3"></div>
+                        <a class="cantantes" href="#Raphael">Raphael</a>
+                    </div>
+                </div>
+            </div>
+            <div class="segundo_recuadro">
+                <div class="seis-fotos-recuadro">
+                    <h1>Nuestros Artistas</h1>
+                    <div class="fila">
+                        <div class="retrato4"><img src="/Imagenes/si.jpg" alt="Imagen 4"></div>
+                        <a class="cantantes" href="#pataky">Elsa Pataky</a>
+                        <div class="retrato5"><img src="/Imagenes/ultimo.jpg" alt="Imagen 5"></div>
+                        <a class="cantantes" href="#Dalma">Sergio Dalma</a>
+                        <div class="retrato6"><img src="/Imagenes/tatuador6.jpg" alt="Imagen 6"></div>
+                        <a class="cantantes" href="#Pantoja">Isabel Pantoja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+            
+
+
+        <form id="calculador" action="/enviar_datos" method="POST">
+            <h2 class="calcula"> Calcula el Precio de tu Próximo Tatuaje sin Compromiso</h2>
+            <div class="form-group1">
+                <label class="quest" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label class="quest" for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group2">
+                <label class="quest" for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <label class="quest" for="tamano">Tamaño:</label>
+                <input type="text" id="tamano" name="tamano" required>
+            </div>
+            <div class="form-group3">
+                <label class="quest" for="zona">Zona del cuerpo:</label>
+                <input type="text" id="zona" name="zona" required>
+                <label class="quest" for="fecha">Preferencia de fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group4">
+                <label  class="quest"for="tatuaje">Tatuaje a:</label>
+                <select id="tatuaje" name="tatuaje">
+                    <option value="color">Color</option>
+                    <option value="blanco_negro" class="quest">Blanco y Negro</option>
+                </select>
+                <label class="quest" for="referencia">Subir Foto de Referencia:</label>
+                <input type="file" id="referencia" name="referencia">
+            </div>
+            <input class="enviar" type="submit" value="Enviar">
+        </form>
+
+
+
+        <div id="ubi" class="info-recuadro">
+            <h3>Donde nos encontramos</h3>
+            <a class="ubicaçao" href="https://www.google.com/maps/dir/39.5706368,2.6279936/ies+son+ferrer/@39.5351527,2.4854837,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x129788fef0948d5b:0xc10accc3ef41ff66!2m2!1d2.5031998!2d39.4979659?entry=ttu" target="_blank">Cómo llegar</a>
+            <img class="fotoubi" src="/Imagenes/esta.jpg" alt="Imagen de ubicación">
+            <h4>IES Son Ferrer, Carrer Còndor, 9, 07181 Son Ferrer, Balearic Islands</h4>
+            <img class="maquina" src="/Imagenes/maquina-de-tatuar.png" alt="Imagen de maquina de tatuar">
+        </div>
+
+        <div id="trabajos" class="trabajos"> 
+            
+        </div>
+
+        <div id="nosotros" class="unicos-recuadro">
+            <div class="titulo">
+                <h3>LO QUE NOS HACE ÚNICOS</h3>
+            </div>
+            <div class="texto">
+                <p>Eclipse Inkworks se destaca de la competencia debido a la dedicación de sus artistas en el perfeccionamiento del arte del tatuaje, su compromiso con la seriedad y profesionalismo, la diversidad de estilos disponibles y la presencia de tatuadores reconocidos a nivel mundial que visitan nuestro estudio.</p>
+                <img class="tatuando" src="/Imagenes/tatuando.webp" alt="Imagen Tatuando">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Eclipse Inkworks</p>
+    </footer>
+</body>
+</html>
